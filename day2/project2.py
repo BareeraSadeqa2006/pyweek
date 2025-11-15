@@ -70,4 +70,5 @@ while True:
         print("Exiting...")
         break
     else:
-        print("Sahi option select ker bhai!!")
+        print("please choose the correct option..")
+
