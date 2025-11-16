@@ -28,9 +28,7 @@ if loan and rate and years:
     st.write(f"**Total Interest:** ₹{total_interest:.2f}")
     st.write(f"**Total Amount Paid:** ₹{total_payment:.2f}")
 
-    # ----------------------------
-    # Amortization Table
-    # ----------------------------
+   
     balance = loan
     data = []
 
@@ -55,4 +53,5 @@ if loan and rate and years:
     plt.ylabel("Amount (₹)")
     plt.title("Interest vs Principal Over Time")
     st.pyplot(plt)
+
 
