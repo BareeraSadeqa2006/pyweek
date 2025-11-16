@@ -4,7 +4,7 @@ import numpy as np
 import math
 import matplotlib.pyplot as plt
 
-st.title("💰 Loan EMI Calculator")
+st.title("Loan EMI Calculator")
 st.write("Calculate your Monthly EMI, Total Interest, and Amortization Schedule")
 
 # Inputs
@@ -20,7 +20,7 @@ if loan and rate and years:
     # EMI formula
     emi = loan * r * (math.pow((1 + r), n)) / (math.pow((1 + r), n) - 1)
 
-    st.subheader(f"📌 Monthly EMI: ₹{emi:.2f}")
+    st.subheader(f"Monthly EMI: ₹{emi:.2f}")
 
     total_payment = emi * n
     total_interest = total_payment - loan
@@ -42,13 +42,11 @@ if loan and rate and years:
 
     df = pd.DataFrame(data, columns=["Month", "EMI", "Principal", "Interest", "Balance"])
 
-    st.subheader("📊 Amortization Schedule")
+    st.subheader("Amortization Schedule")
     st.dataframe(df)
 
-    # ----------------------------
-    # Graph
-    # ----------------------------
-    st.subheader("📈 Interest vs Principal Chart")
+   
+    st.subheader("Interest vs Principal Chart")
 
     plt.figure(figsize=(8, 4))
     plt.plot(df["Month"], df["Principal"])
@@ -57,3 +55,4 @@ if loan and rate and years:
     plt.ylabel("Amount (₹)")
     plt.title("Interest vs Principal Over Time")
     st.pyplot(plt)
+
